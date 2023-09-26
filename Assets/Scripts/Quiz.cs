@@ -13,7 +13,7 @@ public class Quiz : MonoBehaviour
     [SerializeField] Sprite defaultAnswerSprite;
     [SerializeField] Sprite correctAnswerSprite;
 
-    Image buttonImage
+    Image buttonImage;
     void Start()
     {
        DisplayQuestion();
@@ -54,10 +54,11 @@ public class Quiz : MonoBehaviour
             button.interactable = state;
         }
     }
-}
+
     void SetDefaultButtonSprites(){
         for(int i = 0; i < answerButtons.Length; i++){
             buttonImage = answerButtons[i].GetComponent<Image>();
             buttonImage.sprite = defaultAnswerSprite;
         }
     }
+}
